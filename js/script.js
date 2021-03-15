@@ -23,12 +23,12 @@ button.addEventListener('click', function campominato(){
    // console.log('indici', i, arr[i]);
   }
   console.log(randomArr);
-
-
+  var conteggio = 0;
+  var giriUtente= 84;
   var utenteArr = [];
-  for (var j = 0; j < 3; j++){
-    var numUtente = prompt('Inserisci un numero: ');
-    console.log('Numero utente:', numUtente);
+  for (var j = 0; j < giriUtente; j++){
+    var numUtente = parseInt(prompt('Inserisci un numero: '));
+    // console.log('Numero utente:', numUtente);
     if(numUtente < 1 || numUtente >100) {
       alert('Il numero deve essere compreso da 1 e 100');
       j--;
@@ -37,15 +37,21 @@ button.addEventListener('click', function campominato(){
       alert('Il numero è gia stato inserito')
       j--;
     }
-    else{
+    else {
       utenteArr.push(numUtente);
+      conteggio++;
 
+      if (randomArr.includes(numUtente)) {
+        console.log('Hai perso!!!!', 'Il tuo punteggio è: ',conteggio );
+        break;
+
+      }else if (utenteArr.length == giriUtente){
+        console.log('Hai vinto!!!!', 'Il tuo punteggio è: ', giriUtente);
+      }
     }
-
-
-
-
   }
-  console.log(utenteArr);
+  // console.log(utenteArr);
+
+
 })
 campominato();
