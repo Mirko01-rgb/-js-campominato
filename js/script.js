@@ -8,7 +8,8 @@
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
 var button = document.getElementById('mybutton');
-button.addEventListener('click', function campominato(){
+button.addEventListener('click',
+function campominato(){
   var numMax = 100;
   var numMin = 1;
   var randomArr = [];
@@ -43,15 +44,18 @@ button.addEventListener('click', function campominato(){
 
       if (randomArr.includes(numUtente)) {
         console.log('Hai perso!!!!', 'Il tuo punteggio è: ',conteggio );
+        var testo = document.getElementById('result');
+        testo.innerHTML = 'Hai perso!!!! ' + ' Il tuo punteggio è: ' + conteggio;
         break;
 
       }else if (utenteArr.length == giriUtente){
         console.log('Hai vinto!!!!', 'Il tuo punteggio è: ', giriUtente);
+        var testo = document.getElementById('result');
+        testo.innerHTML = 'Hai vinto!!!! ' + ' Il tuo punteggio è: ' + giriUtente;
       }
     }
   }
   // console.log(utenteArr);
-
-
 })
+
 campominato();
