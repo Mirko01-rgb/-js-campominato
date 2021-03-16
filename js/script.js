@@ -57,5 +57,3 @@ function campominato(){
   }
   // console.log(utenteArr);
 })
-
-campominato();
