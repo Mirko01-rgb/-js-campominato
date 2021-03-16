@@ -15,7 +15,7 @@
 var button = document.getElementById('mybutton');
 button.addEventListener('click',
 function campominato(){
-   var result = livelDifficult( prompt('Scegli il livello di difficoltà (0,1,2): '));
+   livelDifficult( prompt('Scegli il livello di difficoltà (0,1,2): '));
   // var difficolta = prompt('Scegli il livello di difficoltà (0,1,2): ');
   //
   // if (difficolta == 0){
