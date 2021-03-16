@@ -15,7 +15,7 @@
 var button = document.getElementById('mybutton');
 button.addEventListener('click',
 function campominato(){
-  var difficolta = prompt('Scegli il livello di difficoltà (0,1,2): ');
+  var difficolta = parseInt(prompt('Scegli il livello di difficoltà (0,1,2): '));
   switch ( difficolta) {
     case 0:
     var numMax = 100;
@@ -58,7 +58,7 @@ function campominato(){
   }
   console.log(randomArr);
   var conteggio = 0;
-  var giriUtente= 3;
+  var giriUtente= 84;
   var utenteArr = [];
   for (var j = 0; j < giriUtente; j++){
     var numUtente = parseInt(prompt('Inserisci un numero: '));
