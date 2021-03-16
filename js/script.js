@@ -15,18 +15,21 @@
 var button = document.getElementById('mybutton');
 button.addEventListener('click',
 function campominato(){
-  var difficolta = prompt('Scegli il livello di difficoltà (0,1,2): ')
-  if (difficolta == 0){
-    var numMax = 100;
-    var numMin = 1;
-  }else if (difficolta == 1){
-    var numMax = 80;
-    var numMin = 1;
-  }else if (difficolta == 2){
-    var numMax = 50;
-    var numMin = 1;
+   var result = livelDifficult( prompt('Scegli il livello di difficoltà (0,1,2): '));
+  // var difficolta = prompt('Scegli il livello di difficoltà (0,1,2): ');
+  //
+  // if (difficolta == 0){
+  //   var numMax = 100;
+  //   var numMin = 1;
+  // }else if (difficolta == 1){
+  //   var numMax = 80;
+  //   var numMin = 1;
+  // }else if (difficolta == 2){
+  //   var numMax = 50;
+  //   var numMin = 1;
+  //
+  // }
 
-  }
   var randomArr = [];
   for (var i = 0; i < 16; i++) {
     var rnd = Math.floor(Math.random() * numMax + numMin);
@@ -81,3 +84,28 @@ function campominato(){
   }
   // console.log(utenteArr);
 })
+
+
+function livelDifficult(difficolta){
+  // switch ( difficolta) {
+  //   case 0:
+  //   var numMax = 100;
+  //   var numMin = 1;
+  //   break;
+  //
+  //   case 1:
+  //   var numMax = 80;
+  //   var numMin = 1;
+  //   break;
+  //
+  //   case 2:
+  //   var numMax = 50;
+  //   var numMin = 1;
+  //   break;
+  // }
+// return difficolta;
+
+}
+
+// var result = livelDifficult( prompt('Scegli il livello di difficoltà (0,1,2): '));
+// console.log(result);
